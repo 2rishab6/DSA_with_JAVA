@@ -26,11 +26,14 @@ class insert_array{
     }
 
     public static void main(String[] args){
-        insert_array arr = new insert_array(5);
-        arr.insert(0, 10);
-        arr.insert(1, 20);
-        arr.insert(2, 30);
-        arr.insert(12, 120);
-        arr.insert(1, 50);
+        insert_array ia = new insert_array(5);
+        ia.insert(0, 10);
+        ia.insert(1, 20);
+        ia.insert(2, 30);
+        ia.insert(12, 120);
+        ia.insert(1, 50);
+
+        var firstElement = ia.arr[2];
+        System.out.println(firstElement);
     }
 }
