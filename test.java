@@ -1,9 +1,9 @@
 class test {
     public static void main(String[] args)
     {
-        int a = 1 ;
-        int b = 2 ; 
+        int a = 89 ;
+        int b = 456 ; 
         int c = a + b;
-        System.out.print(c);
+        System.out.println(c);
     }
 }
