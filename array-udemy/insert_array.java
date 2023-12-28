@@ -25,6 +25,12 @@ class insert_array{
         }
     }
 
+    public void TraveseArray (){
+        for(int i = 0 ; i < arr.length ; i++){
+            System.out.println(arr[i] + " ");
+        }
+    }
+
     public static void main(String[] args){
         insert_array ia = new insert_array(5);
         ia.insert(0, 10);
@@ -35,5 +41,7 @@ class insert_array{
 
         var firstElement = ia.arr[2];
         System.out.println(firstElement);
+
+        ia.TraveseArray();
     }
 }
