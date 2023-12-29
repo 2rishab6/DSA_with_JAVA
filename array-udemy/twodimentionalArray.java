@@ -5,8 +5,8 @@ public class twodimentionalArray {
     public twodimentionalArray(int numberofrow , int numberofcol)
     {
         arr = new int[numberofrow][numberofcol];
-        for(int row = 0 ; row < arr.length ; row++){
-            for(int col = 0 ; col < arr[0].length ; col++)
+        for(int row = 0 ; row < numberofrow ; row++){
+            for(int col = 0 ; col < numberofcol ; col++)
             {
                 arr[row][col] = Integer.MIN_VALUE;
             }
