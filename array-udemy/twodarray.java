@@ -2,7 +2,7 @@ import java.util.Arrays;
 class twodarray{
 
     public static void main(String[] args) {
-        int [] [] intarray;
+        int[][] intarray;
 
         intarray = new int[2][2];
 
