@@ -31,6 +31,18 @@ class insert_array{
         }
     }
 
+    public void deleteArray(int deleteindexvalue)
+    {
+       try{
+        arr[deleteindexvalue] = Integer.MIN_VALUE;
+        System.out.println("Successfully deleted");
+       }catch(ArrayIndexOutOfBoundsException e)
+       {
+        System.out.println("not in array");
+       }
+
+    }
+
     public void searchArray(int element)
     {
         for(int i = 0 ; i < arr.length ; i++){
@@ -53,8 +65,12 @@ class insert_array{
         // var firstElement = ia.arr[2];
         // System.out.println(firstElement);
 
-        // ia.TraveseArray();
+
+        ia.deleteArray(1);
 
         ia.searchArray(20);
+
+        ia.TraveseArray();
+        
     }
 }
