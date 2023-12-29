@@ -1,12 +1,13 @@
+import java.util.Arrays;
 public class twodimentionalArray {
 
     int arr [] [] = null;
 
     public twodimentionalArray(int numberofrow , int numberofcol)
     {
-        arr = new int[numberofrow][numberofcol];
-        for(int row = 0 ; row < numberofrow ; row++){
-            for(int col = 0 ; col < numberofcol ; col++)
+        this.arr = new int[numberofrow][numberofcol];
+        for(int row = 0 ; row < arr.length ; row++){
+            for(int col = 0 ; col < arr[0].length ; col++)
             {
                 arr[row][col] = Integer.MIN_VALUE;
             }
@@ -26,6 +27,47 @@ public class twodimentionalArray {
         }
     }
 
+    public void deleteArray(int deleterow, int deletecol)
+    {
+        try{
+            arr[deleterow][deletecol] = Integer.MIN_VALUE;
+            System.out.println("Successfully deleted");
+        }catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("no index here");
+        }
+    }
+
+    // public void traverseArray(){
+    //     for(int row = 0 ; row < arr.length ; row++){
+    //         for(int col = 0 ; col < arr[row].length ; col++){
+    //             System.out.println(arr[row][col]);
+    //         }
+    //     }
+    // }
+
+    public void searchArray(int element)
+    {
+        for(int row = 0 ; row < arr.length ; row++){
+            for(int col = 0 ; col < arr[row].length ; col++){
+                if(arr[row][col] == element){
+                    System.err.println( element + " found in " + row +" " + col + "th position");
+                    return;
+                }
+            }
+        }
+        System.err.println("not found");
+    }
+
+    public void accesscell(int row , int col)
+    {
+        System.out.println("row is " + row + " col is " + col);
+        try{
+            System.out.println( "elemnt is:" + arr[row][col] );
+        }catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("no index here");
+        }
+    }
+
     public static void main(String[] args)
     {
         twodimentionalArray td = new twodimentionalArray(3,3);
@@ -33,6 +75,13 @@ public class twodimentionalArray {
         td.insert(0, 0, 10);
         td.insert(0, 1, 20);
         td.insert(12, 13, 30);
+        System.out.println( Arrays.deepToString(td.arr) );
+
+        // td.deleteArray(0, 1);
+        // System.out.println( Arrays.deepToString(td.arr) );
+        td.searchArray(20);
+        td.accesscell(0, 1);
+
     }
     
 }

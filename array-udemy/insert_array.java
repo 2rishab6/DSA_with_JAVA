@@ -47,7 +47,7 @@ class insert_array{
     {
         for(int i = 0 ; i < arr.length ; i++){
             if(arr[i] == element){
-                System.out.println("element found");
+                System.out.println("element found" + " " + i);
                 return;
             }      
         }
@@ -68,7 +68,7 @@ class insert_array{
 
         ia.deleteArray(1);
 
-        ia.searchArray(20);
+        ia.searchArray(10);
 
         ia.TraveseArray();
         
