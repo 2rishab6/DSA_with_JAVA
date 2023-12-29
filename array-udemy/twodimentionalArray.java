@@ -37,13 +37,14 @@ public class twodimentionalArray {
         }
     }
 
-    // public void traverseArray(){
-    //     for(int row = 0 ; row < arr.length ; row++){
-    //         for(int col = 0 ; col < arr[row].length ; col++){
-    //             System.out.println(arr[row][col]);
-    //         }
-    //     }
-    // }
+    public void traverseArray(){
+        for(int row = 0 ; row < arr.length ; row++){
+            for(int col = 0 ; col < arr[row].length ; col++){
+                System.out.print(arr[row][col] + " ");
+            }
+            System.out.println();
+        }
+    }
 
     public void searchArray(int element)
     {
@@ -81,6 +82,7 @@ public class twodimentionalArray {
         // System.out.println( Arrays.deepToString(td.arr) );
         td.searchArray(20);
         td.accesscell(0, 1);
+        td.traverseArray();
 
     }
     
