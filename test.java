@@ -31,6 +31,18 @@ class test {
         }
     }
 
+    public void searchArray(int element)
+    {
+        for(int i = 0 ; i < arr.length ; i++){
+            if(arr[i] == element){
+                System.out.println("element found");
+                return;
+            }      
+        }
+        System.out.println("element not found");
+    }
+
+
     public static void main(String[] args)
     {
         test ia = new test(3);
@@ -41,9 +53,11 @@ class test {
         ia.insert(12, 120);
         ia.insert(1, 50);
 
-        var firstElement = ia.arr[2];
-        System.out.println(firstElement);
+        // var firstElement = ia.arr[2];
+        // System.out.println(firstElement);
 
-        ia.traverseArray();
+        // ia.traverseArray();
+
+        ia.searchArray(20);
     }
 }
