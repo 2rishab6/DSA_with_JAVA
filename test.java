@@ -31,17 +31,16 @@ class test {
         }
     }
 
-    public void searchArray(int element)
+   public void searchArray(int a){
+    for(int i = 0 ; i < arr.length ; i++)
     {
-        for(int i = 0 ; i < arr.length ; i++){
-            if(arr[i] == element){
-                System.out.println("element found");
-                return;
-            }      
+        if(arr[i] == a){
+            System.out.println("element found in " + i);
+            return;
         }
-        System.out.println("element not found");
     }
-
+    System.out.println("element not found");
+   }
 
     public static void main(String[] args)
     {
@@ -58,6 +57,6 @@ class test {
 
         // ia.traverseArray();
 
-        ia.searchArray(20);
+        ia.searchArray(10);
     }
 }
