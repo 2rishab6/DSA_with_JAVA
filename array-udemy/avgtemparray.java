@@ -8,7 +8,7 @@ public class avgtemparray {
         int [] temp = new int [numdays];
 
         for(int i = 1 ; i <= numdays ; i++){
-            System.out.print)
+            System.out.println();
         }
     }
 }
