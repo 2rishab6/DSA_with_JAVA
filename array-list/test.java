@@ -27,11 +27,8 @@ public class test {
         {
             if(carlover.get(i) == "Thar"){
                 System.out.println("element found at = " + i + " th position");
-                break;
-            }else
-            {
-                System.out.println("element not found");
-            } 
-        }
+                return;
+            }
+        }System.out.println("not found");
     }
 }
