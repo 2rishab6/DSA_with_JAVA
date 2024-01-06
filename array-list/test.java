@@ -23,12 +23,17 @@ public class test {
 
         // Search an element
 
+        carlover.remove("5");
+        System.out.println(carlover);
+
         for ( int i = 0 ; i < carlover.size() ; i++)
         {
-            if(carlover.get(i) == "Thar"){
+            if(carlover.get(i) == "Lamborgini"){
                 System.out.println("element found at = " + i + " th position");
                 return;
             }
         }System.out.println("not found");
+
+        
     }
 }
